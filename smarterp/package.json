@@ -1,0 +1,22 @@
+{
+  "name": "smarterp",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
+    "@vitejs/plugin-react": "^6.0.3",
+    "vite": "^8.1.0"
+  },
+  "dependencies": {
+    "axios": "^1.18.1",
+    "lucide-react": "^1.22.0",
+    "react-router-dom": "^7.18.0",
+    "tailwindcss": "^4.3.1"
+  }
+}
