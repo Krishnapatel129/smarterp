@@ -11,6 +11,10 @@ import Ledgers from "./pages/ledger/Ledgers";
 import CreateLedger from "./pages/ledger/CreateLedger.jsx";
 import EditLedger from "./pages/ledger/EditLedger.jsx";
 
+import Groups from "./pages/group/Groups.jsx";
+import CreateGroup from "./pages/group/CreateGroup.jsx";
+import EditGroup from "./pages/group/EditGroup.jsx";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -27,6 +31,10 @@ export default function App() {
         <Route path="/ledgers" element={<Ledgers />} />
         <Route path="/ledgers/create" element={<CreateLedger />} />
         <Route path="/ledgers/edit/:id" element={<EditLedger />} />
+
+        <Route path="/groups" element={<Groups />} />
+        <Route path="/groups/create" element={<CreateGroup />} />
+        <Route path="/groups/edit/:id" element={<EditGroup />} />
       </Routes>
     </BrowserRouter>
   );

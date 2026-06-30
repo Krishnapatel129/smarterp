@@ -27,11 +27,11 @@ export default function Dashboard() {
       path: "/users",
     },
    {
-  title: "Ledger",
-  icon: <FileText size={35} />,
-  color: "bg-orange-500",
-  path: "/ledgers",
-},
+      title: "Ledger",
+      icon: <FileText size={35} />,
+      color: "bg-orange-500",
+      path: "/ledgers",
+  },
     {
       title: "Inventory",
       icon: <Package size={35} />,
@@ -50,6 +50,12 @@ export default function Dashboard() {
       color: "bg-cyan-600",
       path: "/reports",
     },
+    {
+  title: "Groups",
+  icon: <FileText size={35} />,
+  color: "bg-indigo-600",
+  path: "/groups",
+}
   ];
 
   const handleLogout = () => {
