@@ -8,40 +8,47 @@ import {
   Settings,
   LogOut,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const cards = [
-    {
-      title: "Companies",
-      icon: <Building2 size={35} />,
-      color: "bg-blue-600",
-    },
-    {
-      title: "Users",
-      icon: <Users size={35} />,
-      color: "bg-green-600",
-    },
-    {
-      title: "Ledger",
-      icon: <FileText size={35} />,
-      color: "bg-orange-500",
-    },
-    {
-      title: "Inventory",
-      icon: <Package size={35} />,
-      color: "bg-purple-600",
-    },
-    {
-      title: "Vouchers",
-      icon: <Receipt size={35} />,
-      color: "bg-red-600",
-    },
-    {
-      title: "Reports",
-      icon: <BarChart3 size={35} />,
-      color: "bg-cyan-600",
-    },
-  ];
+  {
+    title: "Companies",
+    icon: <Building2 size={35} />,
+    color: "bg-blue-600",
+    path: "/companies",
+  },
+  {
+    title: "Users",
+    icon: <Users size={35} />,
+    color: "bg-green-600",
+    path: "/users",
+  },
+  {
+    title: "Ledger",
+    icon: <FileText size={35} />,
+    color: "bg-orange-500",
+    path: "/ledger",
+  },
+  {
+    title: "Inventory",
+    icon: <Package size={35} />,
+    color: "bg-purple-600",
+    path: "/inventory",
+  },
+  {
+    title: "Vouchers",
+    icon: <Receipt size={35} />,
+    color: "bg-red-600",
+    path: "/vouchers",
+  },
+  {
+    title: "Reports",
+    icon: <BarChart3 size={35} />,
+    color: "bg-cyan-600",
+    path: "/reports",
+  },
+];
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -90,28 +97,28 @@ export default function Dashboard() {
 
           <div
             key={index}
-            className={`${card.color} text-white rounded-2xl p-8 shadow-xl hover:scale-105 transition duration-300 cursor-pointer`}
+            className={`${card.color} text-white rounded-xl p-5 shadow-lg hover:scale-105 transition duration-300 block`}
           >
 
-            <div className="flex justify-between items-center">
+           <div className="flex justify-between items-center">
+  <div>
+    <h3 className="text-2xl font-bold">{card.title}</h3>
+    <p className="mt-2 text-sm">Open Module</p>
+  </div>
 
-              <div>
+  {card.icon}
+</div>
 
-                <h3 className="text-2xl font-bold">
-                  {card.title}
-                </h3>
-
-                <p className="mt-2 text-sm">
-                  Open Module
-                </p>
-
-              </div>
-
-              {card.icon}
+              <Link
+  key={index}
+  to={card.path}
+  className={`${card.color} text-white rounded-2xl p-8 shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300 block`}
+></Link>
 
             </div>
 
-          </div>
+        
+
 
         ))}
 

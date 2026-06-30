@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
 import pool from "./config/db.js";
+import companyRoutes from "./routes/companyRoutes.js";
 
 dotenv.config();
 
@@ -12,6 +13,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+
+app.use("/api/companies", companyRoutes);
 
 app.get("/", (req, res) => {
   res.send("SmartERP Backend Running");
@@ -30,6 +33,7 @@ app.get("/api/db-test", async (req, res) => {
     });
   }
 });
+
 
 const PORT = process.env.PORT || 5000;
 
