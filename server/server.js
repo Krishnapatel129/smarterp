@@ -9,6 +9,7 @@ import groupRoutes from "./routes/groupRoutes.js";
 import stockGroupRoutes from "./routes/stockGroupRoutes.js";
 import unitRoutes from "./routes/unitRoutes.js";
 import stockItemRoutes from "./routes/stockItemRoutes.js";
+import purchaseRoutes from "./routes/purchaseRoutes.js";
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use("/api/groups", groupRoutes);
 app.use("/api/stock-groups", stockGroupRoutes);
 app.use("/api/units", unitRoutes);
 app.use("/api/stock-items", stockItemRoutes);
+app.use("/api/purchase", purchaseRoutes);
 
 app.get("/", (req, res) => {
   res.send("SmartERP Backend Running");

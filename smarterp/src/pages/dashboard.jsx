@@ -7,6 +7,8 @@ import {
   BarChart3,
   Settings,
   LogOut,
+  ShoppingCart,
+  List,
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -74,6 +76,18 @@ export default function Dashboard() {
   icon: <Package size={35} />,
   color: "bg-cyan-600",
   path: "/stock-items",
+},
+{
+  title: "Purchase Voucher",
+  icon: <ShoppingCart size={35} />,
+  color: "bg-emerald-600",
+  path: "/purchase/create",
+},
+{
+  title: "Purchase List",
+  icon: <List size={35} />,
+  color: "bg-teal-600",
+  path: "/purchase",
 },
   ];
 
