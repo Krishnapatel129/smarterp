@@ -6,6 +6,10 @@ import pool from "./config/db.js";
 import companyRoutes from "./routes/companyRoutes.js";
 import ledgerRoutes from "./routes/ledgerRoutes.js";
 import groupRoutes from "./routes/groupRoutes.js";
+import stockGroupRoutes from "./routes/stockGroupRoutes.js";
+import unitRoutes from "./routes/unitRoutes.js";
+import stockItemRoutes from "./routes/stockItemRoutes.js";
+
 dotenv.config();
 
 const app = express();
@@ -20,6 +24,11 @@ app.use("/api/companies", companyRoutes);
 app.use("/api/ledgers", ledgerRoutes);
 
 app.use("/api/groups", groupRoutes);
+
+app.use("/api/stock-groups", stockGroupRoutes);
+app.use("/api/units", unitRoutes);
+app.use("/api/stock-items", stockItemRoutes);
+
 app.get("/", (req, res) => {
   res.send("SmartERP Backend Running");
 });

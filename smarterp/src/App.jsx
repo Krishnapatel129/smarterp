@@ -15,6 +15,17 @@ import Groups from "./pages/group/Groups.jsx";
 import CreateGroup from "./pages/group/CreateGroup.jsx";
 import EditGroup from "./pages/group/EditGroup.jsx";
 
+import StockGroups from "./pages/stock/StockGroups.jsx";
+import CreateStockGroup from "./pages/stock/CreateStockGroup.jsx";
+import EditStockGroup from "./pages/stock/EditStockGroup.jsx";
+
+import Units from "./pages/stock/Units.jsx";
+import CreateUnit from "./pages/stock/CreateUnit.jsx";
+import EditUnit from "./pages/stock/EditUnit.jsx";
+
+import StockItems from "./pages/stock/StockItems.jsx";
+import CreateStockItem from "./pages/stock/CreateStockItem.jsx";
+import EditStockItem from "./pages/stock/EditStockItem.jsx";
 export default function App() {
   return (
     <BrowserRouter>
@@ -35,6 +46,18 @@ export default function App() {
         <Route path="/groups" element={<Groups />} />
         <Route path="/groups/create" element={<CreateGroup />} />
         <Route path="/groups/edit/:id" element={<EditGroup />} />
+
+        <Route path="/stock-groups" element={<StockGroups />} />
+        <Route path="/stock-groups/create" element={<CreateStockGroup />} />
+        <Route path="/stock-groups/edit/:id" element={<EditStockGroup />} />
+
+        <Route path="/units" element={<Units />} />
+        <Route path="/units/create" element={<CreateUnit />} />
+        <Route path="/units/edit/:id" element={<EditUnit />} />
+
+        <Route path="/stock-items" element={<StockItems />} />
+        <Route path="/stock-items/create" element={<CreateStockItem />} />
+        <Route path="/stock-items/edit/:id" element={<EditStockItem />} />
       </Routes>
     </BrowserRouter>
   );

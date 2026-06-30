@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
+
 export default function Dashboard() {
   const navigate = useNavigate();
 
@@ -55,7 +56,25 @@ export default function Dashboard() {
   icon: <FileText size={35} />,
   color: "bg-indigo-600",
   path: "/groups",
-}
+},
+{
+  title: "Stock",
+  icon: <Package size={35} />,
+  color: "bg-purple-600",
+  path: "/stock-groups",
+},
+{
+  title: "Units",
+  icon: <Package size={35} />,
+  color: "bg-pink-600",
+  path: "/units",
+},
+{
+  title: "Stock Items",
+  icon: <Package size={35} />,
+  color: "bg-cyan-600",
+  path: "/stock-items",
+},
   ];
 
   const handleLogout = () => {
