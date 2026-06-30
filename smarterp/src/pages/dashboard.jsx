@@ -89,6 +89,12 @@ export default function Dashboard() {
   color: "bg-teal-600",
   path: "/purchase",
 },
+{
+  title: "Sales Voucher",
+  icon: <Receipt size={35} />,
+  color: "bg-red-600",
+  path: "/sales",
+}
   ];
 
   const handleLogout = () => {

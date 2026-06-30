@@ -30,6 +30,10 @@ import EditStockItem from "./pages/stock/EditStockItem.jsx";
 import PurchaseVoucher from "./pages/purchase/PurchaseVoucher";
 import PurchaseList from "./pages/purchase/PurchaseList";
 
+import SalesList from "./pages/sales/SalesList.jsx";
+import CreateSales from "./pages/sales/CreateSales.jsx";
+import EditSales from "./pages/sales/EditSales.jsx";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -65,6 +69,10 @@ export default function App() {
 
         <Route path="/purchase/create" element={<PurchaseVoucher />} />
         <Route path="/purchase" element={<PurchaseList />} />
+
+        <Route path="/sales" element={<SalesList />} />
+        <Route path="/sales/create" element={<CreateSales />} />
+        <Route path="/sales/edit/:id" element={<EditSales />} />
       </Routes>
     </BrowserRouter>
   );
