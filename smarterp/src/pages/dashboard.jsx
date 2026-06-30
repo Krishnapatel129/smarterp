@@ -26,12 +26,12 @@ export default function Dashboard() {
       color: "bg-green-600",
       path: "/users",
     },
-    {
-      title: "Ledger",
-      icon: <FileText size={35} />,
-      color: "bg-orange-500",
-      path: "/ledger",
-    },
+   {
+  title: "Ledger",
+  icon: <FileText size={35} />,
+  color: "bg-orange-500",
+  path: "/ledgers",
+},
     {
       title: "Inventory",
       icon: <Package size={35} />,

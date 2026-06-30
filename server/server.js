@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
 import pool from "./config/db.js";
 import companyRoutes from "./routes/companyRoutes.js";
+import ledgerRoutes from "./routes/ledgerRoutes.js";
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.use("/api/auth", authRoutes);
 
 app.use("/api/companies", companyRoutes);
 
+app.use("/api/ledgers", ledgerRoutes);
 app.get("/", (req, res) => {
   res.send("SmartERP Backend Running");
 });
