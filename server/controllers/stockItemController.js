@@ -1,28 +1,31 @@
 import pool from "../config/db.js";
 
 export const createStockItem = async (req, res) => {
-  try {
     const {
-      item_name,
-      stock_group,
-      unit,
-      opening_stock,
-      rate,
-      gst_percentage,
-      description,
-    } = req.body;
+  item_name,
+  stock_group_id,
+  unit_id,
+  opening_stock,
+  rate,
+  hsn_code,
+  gst_percent,
+} = req.body;
 
-    const result = await pool.query(
-      `INSERT INTO stock_items
-      (item_name, stock_group, unit, opening_stock, rate, gst_percentage, description)
-      VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING *`,
-      [item_name, stock_group, unit, opening_stock, rate, gst_percentage, description]
-    );
-
-    res.status(201).json({ message: "Stock item created", data: result.rows[0] });
-  } catch (error) {
-    res.status(500).json({ message: "Create failed", error: error.message });
-  }
+const result = await pool.query(
+  `INSERT INTO stock_items
+   (item_name, stock_group_id, unit_id, opening_stock, rate, hsn_code, gst_percent)
+   VALUES ($1, $2, $3, $4, $5, $6, $7)
+   RETURNING *`,
+  [
+    item_name,
+    stock_group_id,
+    unit_id,
+    opening_stock,
+    rate,
+    hsn_code,
+    gst_percent,
+  ]
+);
 };
 
 export const getStockItems = async (req, res) => {

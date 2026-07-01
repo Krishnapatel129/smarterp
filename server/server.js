@@ -16,6 +16,9 @@ import receiptRoutes from "./routes/receiptRoutes.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
 import contraRoutes from "./routes/contraRoutes.js";
 import stockLedgerRoutes from "./routes/stockLedgerRoutes.js";
+import inventoryRoutes from "./routes/inventoryRoutes.js";
+import gstRoutes from "./routes/gstRoutes.js";
+import reportRoutes from "./routes/reportRoutes.js";
 
 
 dotenv.config();
@@ -47,7 +50,9 @@ app.use("/api/receipts", receiptRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/contra", contraRoutes);
 app.use("/api/stock-ledger", stockLedgerRoutes);
-
+app.use("/api/inventory", inventoryRoutes);
+app.use("/api/gst", gstRoutes);
+app.use("/api/reports", reportRoutes);
 app.get("/", (req, res) => {
   res.send("SmartERP Backend Running");
 });

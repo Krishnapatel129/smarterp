@@ -16,6 +16,8 @@ export default function CreateStockItem() {
     rate: "",
     gst_percentage: "",
     description: "",
+    hsn_code: "",
+gst_percent: "",
   });
 
   useEffect(() => {
@@ -139,6 +141,23 @@ export default function CreateStockItem() {
           <button className="bg-blue-600 text-white p-3 rounded col-span-2">
             Save Stock Item
           </button>
+          <input
+  type="text"
+  name="hsn_code"
+  value={form.hsn_code}
+  onChange={handleChange}
+  placeholder="HSN Code"
+  className="w-full border rounded-lg p-3"
+/>
+
+<input
+  type="number"
+  name="gst_percent"
+  value={form.gst_percent}
+  onChange={handleChange}
+  placeholder="GST %"
+  className="w-full border rounded-lg p-3"
+/>
         </form>
       </div>
     </div>

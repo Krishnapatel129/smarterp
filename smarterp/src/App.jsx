@@ -49,6 +49,14 @@ import CreateContra from "./pages/contra/CreateContra";
 import ContraList from "./pages/contra/ContraList";
 
 import StockLedger from "./pages/reports/StockLedger";
+import InventoryValuation from "./pages/reports/InventoryValuation";
+import GSTReport from "./pages/reports/GSTReport";
+import SalesReport from "./pages/reports/SalesReport";
+import PurchaseReport from "./pages/reports/PurchaseReport";
+import CustomerOutstanding from "./pages/reports/CustomerOutstanding";
+import SupplierOutstanding from "./pages/reports/SupplierOutstanding";
+import ProfitLossReport from "./pages/reports/ProfitLossReport";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -111,6 +119,21 @@ export default function App() {
   element={<CreateContra />}
 />
 <Route path="/stock-ledger" element={<StockLedger />} />
+
+<Route path="/inventory-valuation" element={<InventoryValuation />} />  
+<Route path="/gst-report" element={<GSTReport />} />
+<Route path="/reports/sales" element={<SalesReport />} />
+<Route path="/reports/purchase" element={<PurchaseReport />} />
+<Route
+  path="/reports/customer-outstanding"
+  element={<CustomerOutstanding />}
+/>
+<Route
+  path="/reports/supplier-outstanding"
+  element={<SupplierOutstanding />}
+/>
+<Route path="/reports/profit-loss" element={<ProfitLossReport />} />
+
       </Routes>
     </BrowserRouter>
   );

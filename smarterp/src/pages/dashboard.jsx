@@ -143,6 +143,48 @@ export default function Dashboard() {
   color: "bg-slate-700",
   path: "/stock-ledger",
 },
+{
+  title: "Inventory Valuation",
+  icon: <Package size={35} />,
+  color: "bg-emerald-700",
+  path: "/inventory-valuation",
+},
+{
+  title: "GST Report",
+  icon: <Receipt size={35} />,
+  color: "bg-orange-700",
+  path: "/gst-report",
+},
+{
+  title: "Sales Report",
+  icon: <BarChart3 size={35} />,
+  color: "bg-green-700",
+  path: "/reports/sales",
+},
+{
+  title: "Purchase Report",
+  icon: <BarChart3 size={35} />,
+  color: "bg-purple-700",
+  path: "/reports/purchase",
+},
+{
+  title: "Customer Outstanding",
+  icon: <BarChart3 size={35} />,
+  color: "bg-red-700",
+  path: "/reports/customer-outstanding",
+},
+{
+  title: "Supplier Outstanding",
+  icon: <BarChart3 size={35} />,
+  color: "bg-orange-700",
+  path: "/reports/supplier-outstanding",
+},
+{
+  title: "Profit & Loss",
+  icon: <BarChart3 size={35} />,
+  color: "bg-lime-700",
+  path: "/reports/profit-loss",
+},
   ];
 
   const handleLogout = () => {
