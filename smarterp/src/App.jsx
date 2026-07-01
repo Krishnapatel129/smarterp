@@ -34,6 +34,21 @@ import SalesList from "./pages/sales/SalesList.jsx";
 import CreateSales from "./pages/sales/CreateSales.jsx";
 import EditSales from "./pages/sales/EditSales.jsx";
 
+import CreateBill from "./pages/Billing/CreateBill";
+import BillList from "./pages/Billing/BillList";
+import EditBill from "./pages/Billing/EditBill";
+import PrintBill from "./pages/Billing/PrintBill";
+
+import CreateReceipt from "./pages/receipt/CreateReceipt";
+import ReceiptList from "./pages/receipt/ReceiptList";
+
+import CreatePayment from "./pages/payment/CreatePayment";
+import PaymentList from "./pages/payment/PaymentList";
+
+import CreateContra from "./pages/contra/CreateContra";
+import ContraList from "./pages/contra/ContraList";
+
+import StockLedger from "./pages/reports/StockLedger";
 export default function App() {
   return (
     <BrowserRouter>
@@ -72,7 +87,30 @@ export default function App() {
 
         <Route path="/sales" element={<SalesList />} />
         <Route path="/sales/create" element={<CreateSales />} />
-        <Route path="/sales/edit/:id" element={<EditSales />} />
+        <Route path="/sales/edit/:id" element={<EditSales />} />  
+
+        <Route path="/billing/create" element={<CreateBill />} />
+        <Route path="/billing/list" element={<BillList />} />
+        <Route path="/billing/edit/:id" element={<EditBill />} />
+        <Route path="/billing/print/:id" element={<PrintBill />} />
+        <Route path="/billing" element={<BillList />} />
+
+        <Route path="/receipts" element={<ReceiptList />} />
+<Route path="/receipts/create" element={<CreateReceipt />} />
+
+        <Route path="/payments" element={<PaymentList />} />
+<Route path="/payments/create" element={<CreatePayment />} />
+
+<Route
+  path="/contra"
+  element={<ContraList />}
+/>
+
+<Route
+  path="/contra/create"
+  element={<CreateContra />}
+/>
+<Route path="/stock-ledger" element={<StockLedger />} />
       </Routes>
     </BrowserRouter>
   );

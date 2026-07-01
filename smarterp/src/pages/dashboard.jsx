@@ -94,7 +94,55 @@ export default function Dashboard() {
   icon: <Receipt size={35} />,
   color: "bg-red-600",
   path: "/sales",
-}
+},
+{
+  title: "Billing System",
+  icon: <Receipt size={35} />,
+  color: "bg-violet-600",
+  path: "/billing",
+},
+{
+  title: "Receipt Voucher",
+  icon: <Receipt size={35} />,
+  color: "bg-lime-600",
+  path: "/receipts/create",
+},
+{
+  title: "Receipt List",
+  icon: <List size={35} />,
+  color: "bg-green-700",
+  path: "/receipts",
+},
+{
+  title: "Payment Voucher",
+  icon: <Receipt size={35} />,
+  color: "bg-amber-600",
+  path: "/payments/create",
+},
+{
+  title: "Payment List",
+  icon: <List size={35} />,
+  color: "bg-yellow-700",
+  path: "/payments",
+},
+{
+  title: "Contra Voucher",
+  icon: <Receipt size={35} />,
+  color: "bg-sky-600",
+  path: "/contra/create",
+},
+{
+  title: "Contra List",
+  icon: <List size={35} />,
+  color: "bg-blue-800",
+  path: "/contra",
+},
+{
+  title: "Stock Ledger",
+  icon: <Package size={35} />,
+  color: "bg-slate-700",
+  path: "/stock-ledger",
+},
   ];
 
   const handleLogout = () => {
